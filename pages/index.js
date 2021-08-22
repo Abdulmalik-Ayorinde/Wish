@@ -13,10 +13,11 @@ export default function Home() {
       <title>Happy Birthday Person</title>
       <link type='favcon/ico' href="#" />
     </Head>
-    <ConfettiComp />
     
     {/* </ConfettiComp> */}
-      <main className={styles.main__container}>        
+      <main className={styles.main__container}> 
+    <ConfettiComp />
+
         <h2 className={styles.h2}>Happy Birthday PersonName</h2>
         <div>
         <Image 

@@ -25,7 +25,7 @@ export default function Form() {
                 setResponse(fail)
                 setTimeout(() => setResponseMessage(""), 6000);
             } else {
-             setResponseMessage(`${err.message}: Kindly check your internet `)
+             setResponseMessage(`${err.message}: Kindly contact admin `)
              setResponse(fail)
              setTimeout(() => setResponseMessage(""), 6000);
             }

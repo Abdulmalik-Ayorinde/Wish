@@ -13,15 +13,15 @@ export default function Form() {
     const handleFormSubmit = async (values) => {
         let {success, fail} = styles
         try {
-            const response = await axios.post('http://localhost:5000/api/home', values)
+            const response = await axios.post('https://nodpractice.herokuapp.com/api/home', values)
             setResponseMessage(`Message Sent Successfully. Thanks `)
             setResponse(success)
             setTimeout(() => setResponseMessage(""), 6000);
-            console.log(values)
+        
         } catch (err) {
-            console.log(err.response)
-            if (err.response && err.response.data.data.code === 11000) {
-                setResponseMessage('Name already used')
+
+            if (err.response) {
+                setResponseMessage(err.response.data.data)
                 setResponse(fail)
                 setTimeout(() => setResponseMessage(""), 6000);
             } else {
@@ -31,8 +31,6 @@ export default function Form() {
             }
         }
     }
-
-    console.log(response)
 
     return (
           <div className={styles.form__container}>

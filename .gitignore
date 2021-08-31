@@ -32,3 +32,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+/pages/messages
+/styles/Page.module.css

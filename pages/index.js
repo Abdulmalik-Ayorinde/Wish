@@ -11,7 +11,7 @@ export default function Home() {
     <>
     <Head>
       <title>Happy Birthday Person</title>
-      <link type='favcon/ico' href="#" />
+      <link type='favcon/ico' href="../public/personface.jpg" />
     </Head>
     
     {/* </ConfettiComp> */}

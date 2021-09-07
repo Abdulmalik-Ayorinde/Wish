@@ -13,7 +13,7 @@ export default function Form() {
     const [responseMessage, setResponseMessage] = useState('')
     const [messageSent, setMessageSent] = useState(false)
 
-    const handleFormSubmit = async (values) => {
+    const handleFormSubmit = async (values, {resetForm}) => {
         let {success, fail} = styles
         setMessageSent(true)
         try {
@@ -22,6 +22,7 @@ export default function Form() {
             setResponse(success)
             setTimeout(() => setResponseMessage(""), 6000);
             setMessageSent(false)
+            resetForm({ values: ''});
         } catch (err) {
             if (err.response) {
                 setResponseMessage(err.response.data.data)
